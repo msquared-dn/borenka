@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  .button {
+    background-color:  var(--secondary);
+    text-transform: none;
+    font-size: large;
+    border-radius: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+ 
+}

@@ -1,0 +1,300 @@
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overscroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  color: black;
+}
+.section-one {
+  background-color: var(--background);
+  position: relative;
+  background-image: url("../../static/aboutUs-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .back-button__mobile {
+    display: none;
+  }
+  .sectionOneContent {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+
+    .partOne {
+      margin-top: 400px;
+      max-width: 650px;
+      margin-left: 50px;
+    }
+    .partTwo {
+      text-align: right;
+      max-width: 650px;
+      margin-top: 100px;
+      margin-right: 50px;
+    }
+  }
+  .backNavigation {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--secondary);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(128, 128, 128, 0.212);
+      border-radius: 50%;
+    }
+  }
+
+  img {
+    max-width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.section-two {
+  background-color: var(--background);
+  background-image: url("../../static/aboutUs-backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .sectionTwoContent {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+
+    .partOne {
+      margin-bottom: 400px;
+      max-width: 650px;
+      margin-left:50px;
+    }
+    .partTwo {
+      text-align: right;
+      max-width: 650px;
+      margin-top: 300px;
+      margin-right: 50px;
+    }
+  }
+}
+
+.section-tree {
+  background-color: var(--background);
+  background-image: url("../../static/aboutUs-background3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-four {
+  background-color: var(--background);
+  background-image: url("../../static/aboutUs-background.png");
+  background-size: cover;
+  button {
+    width: 100%;
+    max-width: 250px;
+    background-color: var(--secondary);
+    border: none;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--secondary-transparent);
+    }
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  a {
+    color: var(--secondary);
+  }
+  ul {
+    margin-top: 10px;
+    li {
+      margin: 5px 0;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 15px;
+    margin-left: 0;
+  }
+  p {
+    letter-spacing: 1px;
+    line-height: 25px;
+    max-width: 800px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  a {
+    width: 100%;
+    max-width: 250px;
+    background-color: var(--secondary);
+    border: none;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--secondary-transparent);
+    }
+  }
+  li {
+    font-size: 20px;
+    list-style-position: inside;
+  }
+}
+
+@media (max-width: 40em) {
+  section {
+    padding: 35px;
+    justify-content: none;
+    scroll-snap-align: unset;
+    scroll-behavior: unset;
+    height: auto;
+  }
+  .container {
+    scroll-snap-type: unset;
+    overflow-y: unset;
+    overscroll-behavior: unset;
+    .details {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1000px;
+      li {
+        text-align: left;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 12px;
+      }
+    }
+    .section-one {
+      background-color: var(--background);
+      background-image: url("../../static/about-us-mobile-background.png");
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .backNavigation {
+        display: none;
+      }
+      .sectionOneContent {
+        display: block;
+
+        .partOne {
+          margin: 0;
+        }
+        .partTwo {
+          text-align: center;
+          margin: 0;
+        }
+      }
+      img {
+        max-width: 150px;
+        position: relative;
+        margin-bottom: 50px;
+      }
+      .back-button__mobile {
+        width: 100%;
+        max-width: 250px;
+        background-color: var(--secondary);
+        border: none;
+        height: 40px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          cursor: pointer;
+          background-color: var(--secondary-transparent);
+        }
+      }
+    }
+
+    .section-two {
+      background-image: url("../../static/about-us-mobile-background.png");
+      background-repeat: no-repeat;
+
+      .sectionTwoContent {
+        display: block;
+        .partOne {
+          margin: 0;
+        }
+        .partTwo {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+    .section-tree {
+      background-image: url("../../static/about-us-mobile-background.png");
+      background-repeat: no-repeat;
+
+      .details {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .section-four {
+      background-image: url("../../static/about-us-mobile-background2.svg");
+      background-repeat: no-repeat;
+
+      .details {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.container{
+    h1{
+        margin-bottom: 5px;
+    }
+}
+
+@media(max-width:40em) {
+    .container{
+        text-align: center;
+
+    }
+}

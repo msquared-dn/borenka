@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+  }
+  .input__p--error-msg {
+    color: red;
+    font-size: 12px;
+    margin-left: 40px;
+  }
+}
+
+.box {
+  width: 400px;
+}
+.alert{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -500%);
+}
+
+@media (max-width: 40em) {
+  .container {
+    .input__p--error-msg {
+      color: red;
+      font-size: 12px;
+    }
+    .box {
+      width: 100%;
+    }
+  }
+}

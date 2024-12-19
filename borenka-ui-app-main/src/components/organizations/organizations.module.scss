@@ -1,0 +1,232 @@
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overscroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+.section-one {
+  background-color: var(--primary);
+  background-image: url("../../static/aboutUs-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .details {
+    .back-button__mobile {
+      display: none;
+    }
+  }
+  .backNavigation {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--secondary);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(128, 128, 128, 0.212);
+      border-radius: 50%;
+    }
+  }
+  img {
+    max-width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.section-two {
+  background-color: var(--primary);
+  background-image: url("../../static/aboutUs-backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-tree {
+  background-color: var(--primary);
+  background-image: url("../../static/aboutUs-background.png");
+  background-size: cover;
+
+  .details {
+    h1 {
+      color: var(--secondary);
+    }
+  }
+}
+
+.section-four {
+  background-color: var(--primary);
+  background-image: url("../../static/aboutUs-background.png");
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+
+  .organizations-logo {
+    width: 100%;
+
+    img {
+      max-width: 300px;
+      margin: 15px;
+      max-height: 70px;
+    }
+    .hr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin-top: -90px;
+      .hrIzvidnici {
+        transform: rotate(90deg);
+        max-height: none;
+        max-width: 200px;
+      }
+    }
+  }
+}
+.details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+  a {
+    color: var(--secondary);
+  }
+  ul {
+    margin-top: 10px;
+    li {
+      margin: 5px 0;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 15px;
+    margin-left: 0;
+    font-family: "Pangolin", cursive;
+  }
+  p {
+    letter-spacing: 1px;
+    line-height: 25px;
+    max-width: 800px;
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    margin-bottom: 15px;
+    font-family: "Pangolin", cursive;
+  }
+}
+
+@media (max-width: 40em) {
+  section {
+    padding: 35px;
+    justify-content: none;
+    scroll-snap-align: unset;
+    scroll-behavior: unset;
+    height: auto;
+  }
+  .container {
+    scroll-snap-type: unset;
+    overflow-y: unset;
+    overscroll-behavior: unset;
+
+    .details {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1000px;
+      li {
+        text-align: left;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 12px;
+      }
+    }
+
+    .section-one {
+      background-color: var(--primary);
+      background-image: url("../../static/about-us-mobile-background.png");
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .backNavigation {
+        display: none;
+      }
+      .details {
+        .back-button__mobile {
+          width: 100%;
+          max-width: 250px;
+          background-color: var(--secondary);
+          border: none;
+          height: 40px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 40px;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            cursor: pointer;
+            background-color: var(--secondary-transparent);
+          }
+        }
+      }
+      img {
+        max-width: 150px;
+        position: relative;
+        margin-bottom: 50px;
+      }
+    }
+
+    .section-two {
+      background-image: url("../../static/about-us-mobile-background2.svg");
+      background-repeat: no-repeat;
+      .details {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .section-four {
+      background-image: url("../../static/about-us-mobile-background2.svg");
+      text-align: center;
+      .organizations-logo {
+        .hrIzvidnici {
+          transform: rotate(90deg);
+        }
+        img {
+          max-width: 200px;
+          max-height: 45px;
+        }
+      }
+    }
+  }
+}

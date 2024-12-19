@@ -1,0 +1,119 @@
+.container {
+  background-color: var(--background);
+  background-image: url("../../static/aboutUs-backgroundTwo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--background);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  .backNavigation {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--secondary);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(128, 128, 128, 0.212);
+      border-radius: 50%;
+    }
+  }
+
+  img {
+    max-width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .back-button__mobile {
+    display: none;
+  }
+}
+h3 {
+  margin-bottom: 25px;
+}
+a {
+  color: var(--secondary);
+}
+.contentLeft {
+  margin-bottom: 120px;
+}
+.contentRight {
+  margin-top: 250px;
+  .mobileNumber {
+    color: var(--secondary);
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  text-align: right;
+}
+
+@media (max-width: 40em) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    justify-content: unset;
+    gap: 50px;
+     h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 12px;
+      }
+    .contentRight {
+      text-align: center;
+      margin: 0;
+    }
+    .contentLeft {
+      margin: 0;
+    }
+    .backNavigation {
+      display: none;
+    }
+    img {
+      max-width: 150px;
+      position: relative;
+    }
+    .back-button__mobile {
+      width: 100%;
+      max-width: 250px;
+      background-color: var(--secondary);
+      border: none;
+      height: 40px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--secondary-transparent);
+      }
+    }
+  }
+}
+
+@media(max-width:20em) {
+  .container{
+    height: auto;
+    padding: 20px;
+  }
+}

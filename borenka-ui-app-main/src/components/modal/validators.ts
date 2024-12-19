@@ -1,0 +1,1 @@
+export const invalidTextInput = (value: string) => value.trim() === ""
